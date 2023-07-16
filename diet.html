@@ -1,0 +1,231 @@
+<html>
+<head>
+	<title>Dietician</title>
+	<style type="text/css">
+     body{
+      color: rgb(200,50,100);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+     }
+     form{
+      font-family: "Times New Roman", Times, serif;;
+     }
+     input[type=text], [type=number], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 20px;
+      font-family: "Lucida Console", "Courier New", monospace;
+      }
+
+       textarea{
+        height: 20%;
+        width: 100%;
+        font-size: 17px;
+        color: black;
+        text-align: justify;
+        font-family: "Lucida Console", "Courier New", monospace;
+       }
+     
+      input[type=button] {
+      width: 100%;
+      background-color: #65c9cd;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 20px;
+    }
+
+     input[type=button]:hover {
+     background-color: #259CA3;
+     }
+     input[type=reset] {
+      width: 20%;
+      background-color: #65c9cd;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 20px;
+    }
+    input[type=reset]:hover {
+     background-color: #259CA3;
+     }
+</style>
+</head>
+<body>
+     <h1 align="center">Your Destination for Professional Fitness services</h1>
+     <p align="center">Get Yours diet plans here...</p>
+     <form name="bmrForm">
+        Your Weight(kg) <input type="text" name="weight" id="weight" required ><br />
+        Your Height(cm) <input type="text" name="height" id="height" required ><br />
+        Your Age        <input type="number" name="age" id="age" required ><br />
+        Gender			    <select name="gender" id="gender" value="gender" required >
+                            <option value="null" active>Select</option>
+            						    <option value="male">Male</option>
+            						    <option value="female">Female</option>
+            						    <option value="other">Other</optio>
+					              </select>
+        Activity        <select name="activity" id="activity" value="activity" required >
+                            <option value="null" active>Select</option>
+            						    <option value="Sedentary (little or no exercise)">1. Sedentary (little or no exercise)</option>
+            						    <option value="Lightly active (1-3 days/week)">2. Lightly active (1-3 days/week)</option>
+            						    <option value="Moderately active (3-5 days/week)">3. Moderately active (3-5 days/week)</option>
+            						    <option value="Very active (6-7 days/week)">4. Very active (6-7 days/week)</option>
+            						    <option value="Super active (twice/day)">5. Super active (twice/day)</option>
+            					   </select>
+						    
+        <input type="button" value="Calculate BMR" onClick="BMR()"><b />
+        Your BMR <input type="text" name="bmr" id="bmr" disabled ><br />
+        Result<br><br> <textarea type="text" name="mean" disabled></textarea><br>
+        <input type="reset" value="Reset" />
+      </form>
+
+
+
+
+
+<script type="text/javascript">
+
+
+   function rand(min, max) {
+   var randomNum = Math.random() * (max - min) + min;
+   return Math.round(randomNum);
+   }
+
+    function BMR(){
+
+    var protein = ["Yogurt(1 cup)","Cooked meat(3 Oz)","Cooked fish(4 Oz)","1 whole egg + 4 egg whites","ofu(5 Oz)"];
+    var fruit = ["Berries(80 Oz)","Apple","Orange","Banana","Dried Fruits(Handfull)","Fruit Juice(125ml)"];
+    var vegetable = ["Any vegetable(80g)"];
+    var grains = ["Cooked Grain(150g)","Whole Grain Bread(1 slice)","Half Large Potato(75g)","Oats(250g)","2 corn tortillas"];
+    var ps = ["Soy nuts(i Oz)","low fat milk(250ml)","Hummus(4 Tbsp)","Cottage cheese (125g)","Flavored yogurt(125g)"];
+    var taste_en = ["2 TSP (10 ml) olive oil","2 TBSP (30g) reduced-calorie salad dressin","1/4 medium avocado","Small handful of nuts","1/2 ounce  grated Parmesan cheese","1 TBSP (20g) jam, jelly, honey, syrup, sugar"];
+     
+
+     var weight =document.getElementById("weight").value;
+     var height =document.getElementById("height").value;
+     var age = document.getElementById("age").value;
+     var gender =document.getElementById("gender").value;
+     var act=document.getElementById("activity").value;
+     
+    
+    if(gender=="male"){
+    	var cal=88.362+ (13.397*parseFloat(weight))+ (4.799*parseFloat(height))- (5.677*parseFloat(age));
+ 
+    }
+    if(gender=="female"){
+    	var cal=447.593+ (9.247*parseFloat(weight))+ (3.098*parseFloat(height))- (4.330*parseFloat(age));
+    	
+    }
+
+    if (act == "Sedentary (little or no exercise)")
+        newcal = cal*1.2;
+        
+    if (act == "Lightly active (1-3 days/week)")
+        newcal = cal*1.375;
+
+    if (act == "Moderately active (3-5 days/week)")
+        newcal = cal*1.55;
+       
+
+    if (act == "Very active (6-7 days/week)")
+        newcal = cal*1.725;
+        
+     if (act == "Super active (twice/day)")
+        newcal = cal*1.9;
+
+     if (newcal<1500){
+    
+        document.bmrForm.bmr.value = newcal;
+  
+        var fin=["Breakfast: "+protein[rand(0,5)]+" + "+fruit[rand(0,5)]];
+
+
+        var fin2=["Lunch: "+protein[rand(0,5)]+" + "+vegetable[0]+" + Leafy Greens"+grains[rand(0,4)]+" + "+taste_en[rand(0,5)]];
+       
+
+        var fin3=["Snack: "+ps[rand(0,4)]+" + "+vegetable[0]]
+        
+       
+        var fin4=["Dinner: "+protein[rand(0,5)]+" + 2 "+vegetable[0]+" + Leafy Greens"+grains[rand(0,4)]+" + "+taste_en[rand(0,5)]];
+        
+        var fin5=["Evening Snack: "+fruit[rand(0,5)]];
+         var result= fin+"\n"+fin2+"\n"+fin3+"\n"+fin4+"\n"+fin5;
+        document.bmrForm.mean.value = result;
+    }
+
+    if (newcal<1800){
+        document.bmrForm.bmr.value = newcal;
+   
+        var fin=["Breakfast: "+protein[rand(0,5)]+" + "+fruit[rand(0,5)]];
+
+
+        var fin2=["Lunch: "+protein[rand(0,5)]+" + "+vegetable[0]+" + Leafy Greens"+grains[rand(0,4)]+" + "+taste_en[rand(0,5)]];
+       
+
+       var fin3=["Snack: "+ps[rand(0,4)]+" + "+vegetable[0]]
+        
+       
+        var fin4=["Dinner: "+protein[rand(0,5)]+" + 2 "+vegetable[0]+" + Leafy Greens"+grains[rand(0,4)]+" + "+taste_en[rand(0,5)]];
+        
+        var fin5=["Evening Snack: "+fruit[rand(0,5)]];
+       
+        var result= fin+"\n"+fin2+"\n"+fin3+"\n"+fin4+"\n"+fin5;
+        document.bmrForm.mean.value = result;
+    }
+
+    if (newcal<2200){
+    	document.bmrForm.bmr.value = newcal;
+    	
+        var fin=["Breakfast: "+protein[rand(0,5)]+" + "+fruit[rand(0,5)]];
+
+
+        var fin2=["Lunch: "+protein[rand(0,5)]+" + "+vegetable[0]+" + Leafy Greens"+grains[rand(0,4)]+" + "+taste_en[rand(0,5)]];
+       
+
+       var fin3=["Snack: "+ps[rand(0,4)]+" + "+vegetable[0]]
+        
+       
+        var fin4=["Dinner: "+protein[rand(0,5)]+" + 2 "+vegetable[0]+" + Leafy Greens"+grains[rand(0,4)]+" + "+taste_en[rand(0,5)]];
+        
+
+        var fin5=["Evening Snack: "+fruit[rand(0,5)]];
+        var result=fin+"\n"+fin2+"\n"+fin3+"\n"+fin4+"\n"+fin5;
+        document.bmrForm.mean.value = result;
+
+     }
+
+    if (newcal>=2200){
+    	document.bmrForm.bmr.value = newcal;
+        var fin=["Breakfast: "+protein[rand(0,5)]+" + "+fruit[rand(0,5)]+"+"+grains[rand(0,4)]];
+
+
+        var fin2=["Lunch: "+protein[rand(0,5)]+" + "+vegetable[0]+" + Leafy Greens"+grains[rand(0,4)]+" + "+taste_en[rand(0,5)]];
+       
+
+       var fin3=["Snack: "+ps[rand(0,4)]+" + "+vegetable[0]]
+        
+       
+        var fin4=["Dinner: "+protein[rand(0,5)]+" + 2 "+vegetable[0]+" + Leafy Greens"+grains[rand(0,4)]+" + "+taste_en[rand(0,5)]];
+        
+       var fin5=["Evening Snack: "+fruit[rand(0,5)]];
+       var result= fin+"\n"+fin2+"\n"+fin3+"\n"+fin4+"\n"+fin5;
+       document.bmrForm.mean.value = result;
+    }
+   
+  }  
+</script> 
+</body>
+</html>

@@ -1,9 +1,3 @@
-/**
-* Template Name: Medicio - v3.0.0
-* Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -317,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .appointment-btn:hover {
-  background: #65c9cd;
+  background: #ec9ca9;
   color: #fff;
 }
 

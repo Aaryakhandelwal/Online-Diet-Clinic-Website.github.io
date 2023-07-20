@@ -1009,7 +1009,8 @@ section {
 
   #appointment img {
     width: 100%; /* Image will occupy the full width of the container on mobile */
-    margin: 20px; /* Remove left margin on mobile */
+    margin-right: 20px; /* Remove left margin on mobile */
+    margin-left: 20px;
     margin-bottom: 20px; /* Add some spacing between the image and the content box */
   }
 }

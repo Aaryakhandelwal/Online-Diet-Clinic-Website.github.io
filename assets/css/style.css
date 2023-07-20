@@ -755,35 +755,24 @@ section {
 .about br {
   display: none; /* Hide line breaks to avoid unnecessary spacing */
 }
- /* introduction passage */
-.intro {
-  padding: 40px;
-  text-align: center;
-  background-color: #d3cece;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin-left: 50px;
-  margin-right:50px;
-}
+ 
+@media (max-width: 767px) {
+  .about .row {
+    flex-direction: column; /* Stack the image and content vertically for mobile */
+    align-items: center; /* Center align the content */
+  }
 
-.intro p {
-  margin-left: 50px;
-  margin-right:50px;
-  margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 1.5;
-  color: #070707;
-}
+  .about img {
+    max-width: 100%; /* Image will occupy the full width of the container on mobile */
+    margin: 0; /* Remove left margin on mobile */
+    margin-bottom: 20px; /* Add some spacing between the image and the paragraph */
+  }
 
-
-
-.larger-text {
-  font-size: 30px;
-  color: blueviolet;
-}
-
-u {
-  text-decoration: underline;
+  .about h2,
+  .about p {
+    text-align: left; /* Align the heading and paragraph to the left on mobile */
+    margin-right: 0; /* Remove right margin on mobile */
+  }
 }
 /*--------------------------------------------------------------
 # Counts

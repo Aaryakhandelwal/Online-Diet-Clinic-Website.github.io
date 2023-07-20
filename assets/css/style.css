@@ -489,7 +489,7 @@ u {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .intro {
     padding: 20px; /* Reduce padding for the box in mobile view */
     text-align: center; /* Align text to the left within the box */

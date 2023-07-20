@@ -317,13 +317,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .appointment-btn:hover {
-  background: #f6f2f3;
+  background: #ec9ca9;
   color: #fff;
 }
 
 @media (max-width: 768px) {
   .appointment-btn {
-    margin: 0 0 0 0;
+    margin: 0 48px 0 0;
     padding: 6px 18px;
   }
 }
@@ -345,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #555555;
+  color: #fcfcfc;
 }
 
 .mobile-nav {
@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: #fff;
+  background: #6d6c6c;
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;

@@ -180,10 +180,16 @@ h1, h2, h3, h4, h5, h6 {
   #header {
     top: 0;
   }
+  
   #header .logo {
     font-size: 18px;
   }
+
+  #header .logo img {
+    max-height: 75px; /* Reduce the logo size by 15 pixels */
+  }
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu

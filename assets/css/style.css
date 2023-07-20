@@ -491,15 +491,15 @@ u {
 
 @media (max-width: 767px) {
   .intro {
-    padding: 0; /* Remove padding for the box in mobile view */
-    text-align: left; /* Align the text to the left within the box */
+    padding: 0px; /* Remove padding for the box in mobile view */
+    text-align: center; /* Align the text to the left within the box */
     background-color: transparent; /* Remove background color or set to none */
     box-shadow: none; /* Remove the box shadow */
     margin: 5px; /* Optional: Add margin for spacing if needed */
   }
 
   .intro p {
-    margin: 5px; /* Remove left and right margins to fit the text inside the box */
+    margin: 20px; /* Remove left and right margins to fit the text inside the box */
     font-size: 18px; /* Adjust font size for mobile view if needed */
   }
 }

@@ -324,8 +324,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .appointment-btn {
-    margin-left: 5px; /* Adjust the value to move the button to the left by 20px */
-    margin-right: 40px; /* Add this to maintain the right margin */
+    /* margin-left: 5px;  */
+    margin-right: 40px; 
     padding: 6px 18px;
     /* other mobile styles */
   }

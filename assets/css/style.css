@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
 .appointment-btn {
   margin-left: 25px;
   background: #f75c5c;
-  color: #f9b1b1;
+  color: #fcf9f9;
   border-radius: 4px;
   padding: 8px 25px;
   white-space: nowrap;
@@ -317,15 +317,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .appointment-btn:hover {
-  background: #111111;
-  color: #161616;
+  background: #f75c5c;
+  color: #050505;
 }
 
 
 @media (max-width: 767px) {
   .appointment-btn {
     /* margin-left: 5px;  */
-    margin-right: 40px; 
+    margin-right: 48px; 
     padding: 6px 18px;
     /* other mobile styles */
   }
@@ -463,34 +463,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-/* for the boxes */
-.approach {
-  margin-top: 20px;
-}icon
 
-.approach h2 {
-  color: #333;
-}
-
-.approach ul {
-  list-style-type: none; /* Remove default bullet points */
-  margin-left: 20px;
-}
-
-.approach ul li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
-}
-
-.approach ul li:before {
-  content: "\f10c"; /* Unicode for the "tick" icon from Icofont */
-  font-family: Icofont;
-  position: absolute;
-  left: 0;
-  top: 2px;
-}
- 
 
 /*--------------------------------------------------------------
 # Sections General

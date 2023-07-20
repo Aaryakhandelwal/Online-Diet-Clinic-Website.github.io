@@ -322,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .appointment-btn {
     /* margin-left: 5px;  */
     margin-right: 40px; 
@@ -376,7 +376,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #555555;
+  color: #fabfbf;
   padding: 10px 20px;
   font-weight: 500;
   outline: none;

@@ -491,12 +491,12 @@ u {
 
 @media (max-width: 768px) {
   .intro {
-    padding: 10px; /* Reduce padding for the box in mobile view */
-    text-align: left; /* Align text to the left within the box */
+    padding: 5px; /* Reduce padding for the box in mobile view */
+    text-align: center; /* Align text to the left within the box */
   }
 
   .intro p {
-    margin: 0; /* Remove left and right margins to fit the text inside the box */
+    margin: 5px; /* Remove left and right margins to fit the text inside the box */
     font-size: 18px; /* Adjust font size for mobile view if needed */
   }
 }
@@ -770,8 +770,10 @@ section {
 
   .about h2,
   .about p {
-    text-align: left; /* Align the heading and paragraph to the left on mobile */
-    margin-right: 0; /* Remove right margin on mobile */
+    text-align: center; /* Align the heading and paragraph to the left on mobile */
+    margin-right: 20px; /* Remove right margin on mobile */
+    margin-left: 20px;
+
   }
 }
 /*--------------------------------------------------------------

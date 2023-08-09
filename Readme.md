@@ -1,6 +1,7 @@
 # Online Diet Clinic
 
 Welcome to the Online Diet Clinic GitHub repository! This repository contains the source code and assets for our online diet clinic website. The website aims to provide individuals with personalized diet plans, expert advice, and a supportive community to achieve their health and wellness goals.
+To visit the site click on the link: https://zealwellnessanddietsolutions.github.io/ZealWellnessbyPrachiSinghal.github.io/
 
 ## Getting Started
 

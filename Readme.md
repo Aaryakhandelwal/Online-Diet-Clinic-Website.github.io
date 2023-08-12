@@ -1,5 +1,6 @@
-# Online Diet Clinic
+# Online Diet Clinic Website
 Welcome to the Online Diet Clinic website! This project serves as a testament to my advanced skills in web development. Leveraging HTML, CSS, and JavaScript, along with the Node.js and Express frameworks, I've crafted a dynamic and user-friendly platform tailored for remote diet consultations.
+
 The main features of websites include:
 * User-Friendly Navigation: A thoughtfully designed navigation system ensures effortless exploration of different sections within the website. This intuitive approach enhances user engagement and satisfaction
 * Interactive Elements: To enrich user interaction, the website incorporates various animations, drop-down menus, and color-coded backgrounds. These enhancements contribute to an elevated and engaging user experience.
